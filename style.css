@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+body {
+  background: #e0e0e0 center no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.socialBtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 60px;
+  height: 60px;
+  font-size: 40px;
+  color: #333;
+  text-decoration: none;
+  border-radius: 50%;
+  background: #e0e0e0;
+  box-shadow:  -20px 20px 40px #bebebe,
+              20px -20px 40px #ffffff;
+  margin: 0 20px;
+  transition: all 0.3s ease;
+}
+.socialBtn:hover {
+  color: #fff;
+}
+.tooltip {
+  position: absolute;
+  transform: translateY(-120%);
+  opacity: 0;
+  visibility: hidden;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 100px;
+  color: #fff;
+  box-shadow:  -20px 20px 40px #bebebe,
+              20px -20px 40px #ffffff;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.tooltip::before {
+  content: '';
+  position: absolute;
+  top: calc(100% - 1px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  clip-path: polygon(0 0, 50% 50%, 100% 0);
+}
+.socialBtn:hover .tooltip {
+  transform: translateY(-150%);
+  opacity: 1;
+  visibility: visible;
+}
+.youtube:hover,
+.youtube .tooltip,
+.youtube .tooltip::before {
+  background: #ff0000;
+}
+.google:hover,
+.google .tooltip,
+.google .tooltip::before {
+  background: #eb493b;
+}
+.facebook:hover,
+.facebook .tooltip,
+.facebook .tooltip::before {
+  background: #1f7bf2;
+}
+.instagram:hover,
+.instagram .tooltip,
+.instagram .tooltip::before {
+  background: #f60863;
+}
+.twitter:hover,
+.twitter .tooltip,
+.twitter .tooltip::before {
+  background: #1f9ff0;
+}
+.linkedin:hover,
+.linkedin .tooltip,
+.linkedin .tooltip::before {
+  background: #126bc4;
+}
+
+
+
+
+
+
